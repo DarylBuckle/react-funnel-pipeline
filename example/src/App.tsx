@@ -18,7 +18,7 @@ const App = () => {
           <div style={{width:'100%'}}>
               <ul className='navbar-nav ml-lg-5'>
                   <li className='nav-item mr-lg-3'>
-                      <a className={'nav-link active'} href='/'>Examples</a>
+                      <a className={'nav-link active'} href='.'>Examples</a>
                   </li>
                   <li className='nav-item mr-lg-3'>
                       <a className={'nav-link'} href='http://github.com/darylbuckle/react-funnel-pipeline'>Documentation</a>
