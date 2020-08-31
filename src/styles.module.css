@@ -1,9 +1,28 @@
-/* add css module styles here (optional) */
 
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
+.funnel-pipeline-chart {
+  -webkit-clip-path: polygon(0 0, 100% 0, 60% 78%, 60% 90%, 40% 100%, 40% 78%);
+  clip-path: polygon(0 0, 100% 0, 60% 78%, 60% 90%, 40% 100%, 40% 78%);
   text-align: center;
+}
+
+.funnel-pipeline-chart .funnel-pipeline-chart-row {
+  width:100%;
+  min-height: 1px;
+  font-size: 12px;
+  padding: 10px 0;
+  margin: 2px 0;
+  color:white;
+}
+
+.funnel-pipeline-chart .funnel-pipeline-chart-row:last-child {
+  padding-bottom: 40px;
+}
+
+.funnel-pipeline-chart .funnel-pipeline-chart-row:hover {
+  background-color: #484848 !important;
+}
+
+.funnel-pipeline-chart .funnel-pipeline-chart-row .funnel-pipeline-chart-title {
+  font-size: 1.1rem;
+  padding-bottom: 5px;
 }
