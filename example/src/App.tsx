@@ -13,7 +13,7 @@ const App = () => {
   const [chartHeight, setChartHeight] = useState('500')
 
   return (
-    <div>
+    <div className='examples-page'>
       <nav className='navbar navbar-expand-lg navbar-dark bg-primary fixed-top'>
           <div style={{width:'100%'}}>
               <ul className='navbar-nav ml-lg-5'>

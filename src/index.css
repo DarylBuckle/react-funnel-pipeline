@@ -19,7 +19,7 @@
 }
 
 .funnel-pipeline-chart .funnel-pipeline-chart-row:hover {
-  background-color: #484848 !important;
+  opacity: .7;
 }
 
 .funnel-pipeline-chart .funnel-pipeline-chart-row .funnel-pipeline-chart-title {

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styles from './styles.module.css'
+import './index.css'
 
 interface IFunnelChartProps {
   data: any
@@ -137,7 +137,7 @@ class FunnelChart extends React.Component<
           rows.push(
             <div
               key={'funnel-pipeline-chart-row-' + thisRow.name}
-              className={styles['funnel-pipeline-chart-row']}
+              className='funnel-pipeline-chart-row'
               style={rowStyle}
               title={toolTip}
               onClick={
@@ -149,7 +149,7 @@ class FunnelChart extends React.Component<
               <div>
                 {showTitle ? (
                   <div
-                    className={styles['funnel-pipeline-chart-title']}
+                    className='funnel-pipeline-chart-title'
                     style={rowTitleStyle}
                   >
                     {thisRow.name}
@@ -157,7 +157,7 @@ class FunnelChart extends React.Component<
                 ) : null}
                 {showValue ? (
                   <div
-                    className={styles['funnel-pipeline-chart-value']}
+                    className='funnel-pipeline-chart-value'
                     style={rowValueStyle}
                   >
                     {showRunningTotal ? runningTotal : thisRow.value}
@@ -200,7 +200,7 @@ class FunnelChart extends React.Component<
     }
 
     return (
-      <div className={styles['funnel-pipeline-chart']} style={chartStyles}>
+      <div className='funnel-pipeline-chart' style={chartStyles}>
         {title ? <h2 style={{ marginBottom: '30px' }}>{title}</h2> : null}
         {this.setFunnelRows()}
       </div>
