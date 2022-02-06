@@ -16,3 +16,8 @@ code {
 input[type=checkbox], label {
   margin-right: 5px;
 }
+
+.examples-page .funnel-pipeline-chart .funnel-pipeline-chart-row:hover {
+  background-color: #484848 !important;
+  opacity: 1;
+}

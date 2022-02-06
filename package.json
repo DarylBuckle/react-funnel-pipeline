@@ -1,6 +1,6 @@
 {
   "name": "react-funnel-pipeline",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A lightweight component for rendering a basic funnel chart.",
   "author": "DarylBuckle",
   "license": "MIT",
@@ -23,8 +23,8 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle-crl --no-compress --format modern,cjs",
-    "start": "microbundle-crl watch --no-compress --format modern,cjs",
+    "build": "microbundle-crl --no-compress --format modern,cjs --css-modules false",
+    "start": "microbundle-crl watch --no-compress --format modern,cjs --css-modules false",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
