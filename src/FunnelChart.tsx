@@ -15,6 +15,7 @@ interface IFunnelChartProps {
   getRowStyle?: (row: any) => any
   getRowNameStyle?: (row: any) => any
   getRowValueStyle?: (row: any) => any
+  getRowValue?: (row: any) => any
   getToolTip?: (row: any) => string
   onRowClick?: (row: any) => void
 }
@@ -58,6 +59,7 @@ class FunnelChart extends React.Component<
       getRowStyle,
       getRowNameStyle,
       getRowValueStyle,
+      getRowValue,
       getToolTip,
       onRowClick
     } = this.props
@@ -160,7 +162,7 @@ class FunnelChart extends React.Component<
                     className='funnel-pipeline-chart-value'
                     style={rowValueStyle}
                   >
-                    {showRunningTotal ? runningTotal : thisRow.value}
+                    {showRunningTotal ? runningTotal : getRowValue(thisRow.value)}
                   </div>
                 ) : null}
               </div>
