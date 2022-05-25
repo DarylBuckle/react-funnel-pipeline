@@ -83,7 +83,7 @@ class FunnelChart extends React.Component<
         let showTitle = true
         let showValue = true
 
-        if (thisRow.value > 0) {
+        if (thisRow.value >= 0) {
           let rowStyle: any = {}
           let rowTitleStyle: any = {}
           let rowValueStyle: any = {}
