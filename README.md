@@ -76,6 +76,7 @@ Or view the online examples at [https://darylbuckle.github.io/react-funnel-pipel
 |    getRowStyle | func(row)  |  | false | A function which parses row data. Return a JSX style object to override styles for that row. |
 |    getRowNameStyle | func(row)  |  | false | A function which parses row data. Return a JSX style object to override styles for that rows name. |
 |    getRowValueStyle | func(row)  |  | false | A function which parses row data. Return a JSX style object to override styles for that rows value. |
+|    decorateValue | func(row, index, array)  |  | false | A function which decorates the value when rendering the row value. Return an object to override the value displayed on the row. The unaltered value is used in all other calculations. |
 |    getToolTip | func(row)  |  | false | A function which parses row data. Return a string to override the tooltip for that row. |
 |    onRowClick | func(row)  |  | false | Called when a row/segment is clicked. Parses the data of the row which was clicked on. |
 
