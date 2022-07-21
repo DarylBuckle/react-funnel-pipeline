@@ -4,8 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/react-funnel-pipeline.svg)](https://www.npmjs.com/package/react-funnel-pipeline) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-
-<img lt="react-funnel-pipeline" src="https://user-images.githubusercontent.com/15156674/91746751-faa55000-ebb4-11ea-9f12-a52bb62234d6.png">
+![react-funnel-pipeline](./funnel.png)
 
 ## Contents
 
@@ -44,6 +43,7 @@ class Example extends Component {
           { name: 'Consideration', value: 84 },
           { name: 'Evaluation', value: 72 },
           { name: 'Commitment', value: 19 },
+          { name: 'Pre-sale', value: 0 },
           { name: 'Sale', value: 10 }
         ]}
       />

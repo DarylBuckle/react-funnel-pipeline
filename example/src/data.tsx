@@ -5,6 +5,7 @@ const data = [
   { name: 'Consideration', value: 84 },
   { name: 'Evaluation', value: 72 },
   { name: 'Commitment', value: 19 },
+  { name: 'Pre-sale', value: 0 },
   { name: 'Sale', value: 10 }
 ]
 
