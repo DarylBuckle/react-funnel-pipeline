@@ -4,8 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/react-funnel-pipeline.svg)](https://www.npmjs.com/package/react-funnel-pipeline) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-
-<img lt="react-funnel-pipeline" src="https://user-images.githubusercontent.com/15156674/91746751-faa55000-ebb4-11ea-9f12-a52bb62234d6.png">
+![react-funnel-pipeline](./funnel.png)
 
 ## Contents
 
@@ -44,6 +43,7 @@ class Example extends Component {
           { name: 'Consideration', value: 84 },
           { name: 'Evaluation', value: 72 },
           { name: 'Commitment', value: 19 },
+          { name: 'Pre-sale', value: 0 },
           { name: 'Sale', value: 10 }
         ]}
       />
@@ -76,6 +76,7 @@ Or view the online examples at [https://darylbuckle.github.io/react-funnel-pipel
 |    getRowStyle | func(row)  |  | false | A function which parses row data. Return a JSX style object to override styles for that row. |
 |    getRowNameStyle | func(row)  |  | false | A function which parses row data. Return a JSX style object to override styles for that rows name. |
 |    getRowValueStyle | func(row)  |  | false | A function which parses row data. Return a JSX style object to override styles for that rows value. |
+|    decorateValue | func(row, index, array)  |  | false | A function which decorates the value when rendering the row value. Return an object to override the value displayed on the row. The unaltered value is used in all other calculations. |
 |    getToolTip | func(row)  |  | false | A function which parses row data. Return a string to override the tooltip for that row. |
 |    onRowClick | func(row)  |  | false | Called when a row/segment is clicked. Parses the data of the row which was clicked on. |
 
