@@ -11,10 +11,12 @@ interface IFunnelChartProps {
   heightRelativeToValue: boolean
   chartHeight?: number
   chartWidth?: number
-  style?: any
-  getRowStyle?: (row: any) => any
-  getRowNameStyle?: (row: any) => any
-  getRowValueStyle?: (row: any) => any
+  style?: React.CSSProperties
+  funnelShape?: 'standard' | 'flat'
+  getRowStyle?: (row: any) => React.CSSProperties
+  getRowNameStyle?: (row: any) => React.CSSProperties
+  getRowValueStyle?: (row: any) => React.CSSProperties
+  getTitleStyle?: (title: any) => React.CSSProperties
   decorateValue?: (row: any, index: number, data: any) => any
   getToolTip?: (row: any) => string
   onRowClick?: (row: any) => void
@@ -40,7 +42,8 @@ class FunnelChart extends React.Component<
       '#4466a3'
     ],
     showRunningTotal: false,
-    heightRelativeToValue: false
+    heightRelativeToValue: false,
+    funnelShape: 'standard'
   }
 
   constructor(props: IFunnelChartProps) {
@@ -86,9 +89,9 @@ class FunnelChart extends React.Component<
         let showValue = true
 
         if (thisRow.value >= 0) {
-          let rowStyle: any = {}
-          let rowTitleStyle: any = {}
-          let rowValueStyle: any = {}
+          let rowStyle: React.CSSProperties = {}
+          let rowTitleStyle: React.CSSProperties = {}
+          let rowValueStyle: React.CSSProperties = {}
           const decoratedValue =
             typeof decorateValue === 'function'
               ? decorateValue(thisRow, i1, data)
@@ -119,9 +122,8 @@ class FunnelChart extends React.Component<
             rowStyle.backgroundColor = thisRow.backgroundColor
           }
           if (!rowStyle.backgroundColor) {
-            rowStyle.backgroundColor = this.props.pallette[
-              i1 % this.props.pallette.length
-            ]
+            rowStyle.backgroundColor =
+              this.props.pallette[i1 % this.props.pallette.length]
           }
 
           if (!showNames) {
@@ -195,9 +197,20 @@ class FunnelChart extends React.Component<
   }
 
   render() {
-    const { title, style } = this.props
+    const { title, style, funnelShape, getTitleStyle } = this.props
 
-    const chartStyles: any = {}
+    let titleStyle: React.CSSProperties = { marginBottom: '30px' }
+
+    if (typeof getTitleStyle === 'function') {
+      titleStyle = getTitleStyle(title)
+    }
+
+    const funnelShapeClassName =
+      funnelShape === 'flat'
+        ? 'funnel-pipeline-chart-flat'
+        : 'funnel-pipeline-chart'
+
+    const chartStyles: React.CSSProperties = {}
     if (style) {
       Object.assign(chartStyles, style)
     }
@@ -206,8 +219,8 @@ class FunnelChart extends React.Component<
     }
 
     return (
-      <div className='funnel-pipeline-chart' style={chartStyles}>
-        {title ? <h2 style={{ marginBottom: '30px' }}>{title}</h2> : null}
+      <div className={funnelShapeClassName} style={chartStyles}>
+        {title ? <h2 style={titleStyle}>{title}</h2> : null}
         {this.setFunnelRows()}
       </div>
     )

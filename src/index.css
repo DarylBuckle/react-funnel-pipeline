@@ -1,9 +1,16 @@
 
+.funnel-pipeline-chart-flat {
+  -webkit-clip-path: polygon(0 0, 100% 0, 60% 78%, 60% 100%, 40% 100%, 40% 78%);
+  clip-path: polygon(0 0, 100% 0, 60% 78%, 60% 100%, 40% 100%, 40% 78%);
+  text-align: center;
+}
+
 .funnel-pipeline-chart {
   -webkit-clip-path: polygon(0 0, 100% 0, 60% 78%, 60% 90%, 40% 100%, 40% 78%);
   clip-path: polygon(0 0, 100% 0, 60% 78%, 60% 90%, 40% 100%, 40% 78%);
   text-align: center;
 }
+
 
 .funnel-pipeline-chart .funnel-pipeline-chart-row {
   width:100%;
